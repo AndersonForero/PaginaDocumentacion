@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>
+                <h2>Tutorial de HTML</h2>
+            </header>
+            <a class="nav-link" href="#Introducción_a_HTML:_crear_la_primera_página">Introducción a HTML: crear la primera página</a>
+            <a class="nav-link" href="#HTML_básico:_cómo_estructurar_un_texto_con_etiquetas">HTML básico: cómo estructurar un texto con etiquetas</a>
+            <a class="nav-link" href="#Componer_la_estructura_interna_de_una_página_web_con_HTML">Componer la estructura interna de una página web con HTML</a>
+            <a class="nav-link" href="#Cómo_puedes_incluir_imágenes,_vídeos_o_gráficos_en_tu_página_web">Cómo puedes incluir imágenes, vídeos o gráficos en tu página web</a>
+            <a class="nav-link" href="#Cómo_enlazar_páginas_y_contenidos:_la_importancia_de_los_hipervínculos">Cómo enlazar páginas y contenidos: la importancia de los hipervínculos</a>
+        </nav>
+        <section class="main-section" id="Introducción_a_HTML:_crear_la_primera_página">
+            <header>
+                <h2>Introducción a HTML: crear la primera página</h2>
+            </header>
+            <p>En el primer paso de nuestro tutorial de HTML mostraremos cómo crear una página sencilla que se podrá visualizar en el navegador. Esta página no es un documento HTML válido, estructurado según determinados estándares de calidad, sino una mera página de prueba. Tanto para la creación de esta página como para el resto de ejemplos contenidos en este manual de HTML básico se toma el editor Notepad++ como herramienta de referencia, de modo que si usas otro programa diferente, tendrás que tener en cuenta que los pasos podrían variar.</p>
+
+            <p>Abre el editor y guarda un documento nuevo con el nombre de test. Como formato de archivo escoge "Hypertext markup language file" para que el navegador pueda entender más adelante que se trata de una página de HTML y lo abra como tal. En el caso que utilices el editor de textos simple, selecciona "Todos los archivos" como formato de archivo y la codificación UTF-8. En este editor hay que indicar manualmente que se trata de un documento HTML. Lo haremos guardando el archivo con el nombre test.html.</p>
+
+            <p>Este documento debería poder mostrarse en tu navegador haciendo doble clic sobre él, pero como aún no tiene ningún contenido verás una página en blanco. En el siguiente paso añadimos entonces un texto de prueba como "This is my first webpage!" ("Esta es mi primera página web").</p>
+        </section>
+        <section class="main-section" id="HTML_básico:_cómo_estructurar_un_texto_con_etiquetas">
+            <header>
+                <h2>HTML básico: cómo estructurar un texto con etiquetas</h2>
+            </header>
+            <p>Así habrás creado una primera página web, incluso sin haber escrito ni una línea de código. Si, de la misma manera, intentas añadir un texto bien articulado con títulos y párrafos, pronto te darás cuenta de que es imposible hacerlo sin etiquetas. Cualquier formato añadido, por ejemplo, con un procesador de texto, desaparecerá de la vista en el navegador cuando abras el documento HTML: los puntos aparte desaparecen, los espacios se eliminan, etc. La solución pasa indefectiblemente por marcar todos los componentes formales de texto como tales mediante los elementos estructuradores adecuados, que no es otra cosa que adentrarnos en el mundo de las etiquetas de HTML.</p>
+
+            <h3>Definir párrafos con la etiqueta &ltp&gt</h3>
+
+            <p>Este elemento, cuya nomenclatura proviene del inglés "paragraph" ("párrafo") es necesario para crear separaciones por párrafos. Con la etiqueta de inicio &ltp&gt se marca dónde comienza el párrafo y con el de cierre &ltp&gt dónde acaba. El texto se escribe entre estas dos etiquetas.</p>
+
+            <p>En todas las versiones de HTML, excepto en XHTML, el tag de cierre es opcional, aunque conviene acostumbrarse a usarlo no solo durante el aprendizaje sino también porque denota un buen estilo.</p>
+
+            <p>Puedes probar a marcar párrafos con la etiqueta &ltp&gt en tu página de prueba, añadiendo otra frase ("This is the second paragraph of my first webpage" en este ejemplo o "Este es el segundo párrafo de mi primera página web") a aquella primera y marcándolas con la etiqueta, por ejemplo, así:</p>
+
+            <div class="codigo"><code>&ltp&gt This is my first webpage!&ltp&gt <br>
+&ltp&gtThis is the second paragraph of my first webpage.&ltp&gt</code></div>
+
+            <h3>Añadir títulos y subtítulos con la etiqueta &lth&gt</h3>
+
+            <p>Los títulos también se cuentan entre los elementos básicos de un texto bien estructurado. Gracias a los marcadores estructurales no solo puedes señalar un título como tal sino que también tienes la posibilidad de crear una jerarquía de títulos principales y secundarios. Para ello cuentas con las etiquetas &lth1&gt hasta &lth6&gt, aunque &lth1&gt representa el titular principal de cada subpágina y solo habría que usarlo una única vez, al contrario que todos los demás a partir de &lth2&gt.</p>
+
+            <p>Aquí, es importante mantener la jerarquía correcta y no utilizar los diferentes niveles al azar para que tanto el lector como el buscador puedan entender la estructura del texto a partir de los diferentes títulos.</p>
+
+            <p>Para añadirle a esta primera página de prueba un título principal y un título secundario puedes utilizar los siguientes comandos:</p>
+            <div class="codigo"><code>&lth1&gtMain heading: my first webpage&lth1&gt <br>
+&ltp&gtThis is my first webpage!&ltp&gt <br>
+&lth2&gtSecond heading&lth2&gt <br>
+&ltp&gtThis is the second paragraph of my first webpage.&ltp&gt</code></div>
+
+            <h3>Presentar información en tablas: &lttable&gt, &lttr&gt y &lttd&gt</h3>
+            <p>Durante mucho tiempo fue habitual utilizar las tablas de HTML tanto para presentar datos complejos de una forma más sencilla, como también para estructurar por entero el diseño de una página web o para subdividir el texto en varias columnas. Sin embargo, con el aumento de la popularidad de CSS este papel extra de las tablas pasó a un segundo plano, de tal modo que hoy las tablas asumen únicamente la función para lo que fueron pensadas, es decir, la presentación de datos de forma ordenada. Las tablas se componen, por lo menos, de estos tres elementos:</p>
+            <ul>
+                <li>&lttable&gt: esta etiqueta marca el inicio y el cierre de una tabla en HTML, aunque por sí sola no informa al navegador de aspectos necesarios para mostrarse como el número de filas o de columnas.</li>
+                <li>&lttr&gt: con el elemento "table row" (fila de la tabla) se añaden tantas filas a la tabla como sea necesario.</li>
+                <li>&lttd&gt: las columnas completan la estructura básica de una tabla. Para ello necesitamos el tag "table data" (datos de la tabla), que se subordina a una etiqueta &lttr&gt, puesto que, dentro de una fila, se crean varias celdas (una por columna). El contenido de una celda se sitúa entre la etiqueta de inicio &lttd&gt y el de cierre &lttd&gt.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Componer_la_estructura_interna_de_una_página_web_con_HTML">
+            <header>
+                <h2>Componer la estructura interna de una página web con HTML</h2>
+            </header>
+            <p>En el siguiente capítulo de este tutorial de HTML nos ocupamos de la estructura básica de una página web. Los documentos HTML no solo contienen texto, enlaces y otro tipo de contenido como imagen o vídeo, sino también los ya mencionados metadatos, que revelan al navegador, pero también a los crawlers de los buscadores, cómo han de leer la página.</p>
+
+            <p>Algunos de estos metadatos son invisibles al usuario que abre una página, pero otros se muestran en la pestaña del título, en el historial o como titular de los resultados del buscador.</p>
+
+            <p>Reducido a sus elementos mínimos necesarios, el código básico de una página de HTML en castellano sería algo así:</p>
+
+            <div class="codigo"><code>
+                &lt!DOCTYPE html&gt<br>
+                &lthtml lang="en"&gt<br>
+                &lthead&gt<br>
+                &ltmeta charset="UTF-8"&gt<br>
+                &ltmeta name="description" content="Here you can find all information about the HTML basic framework"&gt<br>
+                &lttitle>Learn HTML: The basic framework&lt/title&gt<br>
+                &lt/head&gt<br>
+                &ltbody&gt<br>
+                &lt/body&gt<br>
+                &lt/html&gt
+            </code></div>
+        </section>
+        <section class="main-section" id="Cómo_puedes_incluir_imágenes,_vídeos_o_gráficos_en_tu_página_web">
+            <header>
+                <h2>Cómo puedes incluir imágenes, vídeos o gráficos en tu página web</h2>  
+            </header>
+            <p>No hay duda que el texto es el componente principal de cualquier página web, pero estímulos visuales en la forma de imágenes, fotos o gráficos tienen una gran influencia en la experiencia del usuario, lo que las hace imprescindibles si se aspira a diseñar una buena página. Habitualmente se utilizan estos tres formatos, soportados por todos los navegadores:</p>
+
+            <ul>
+                <li>JPG: el formato JPG se utiliza para fotos, o gráficos semejantes a fotografías, con un fuerte contraste y una gran diversidad cromática, ya que puede representar más de 16 millones de colores y comprimir considerablemente los archivos, aunque vaya ligado a una pérdida de calidad de la imagen.</li>
+                <li>PNG: este es el formato de los gráficos y los logos, ya que puede representar entre 256 (PNG8) y 16,7 millones de colores (PNG24) y, al contrario que JPG, comprime sin pérdida cualitativa. Como contrapartida, el archivo es más grande.</li>
+                <li>GIF: los archivos en formato GIF solo pueden representar 256 colores, aunque son muy utilizados en el desarrollo web porque permite crear pequeñas animaciones, elementos de navegación o gráficos sencillos.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Cómo_enlazar_páginas_y_contenidos:_la_importancia_de_los_hipervínculos">
+            <header>
+                <h2>Cómo enlazar páginas y contenidos: la importancia de los hipervínculos</h2>
+            </header>
+            
+            <p>Los hiperenlaces o hipervínculos, nombre procedente de la voz inglesa "hyperlink" y popularmente conocidos como "links", son la principal razón del éxito sin precedentes de la world wide web y no pueden faltar en un curso de introducción a HTML. Sin estas referencias electrónicas que conducen al usuario de una a otra página o que inician alguna acción, como podría ser la descarga de un documento, no podría existir una interconexión como la que ofrece la red de redes.  Se pueden distinguir tres tipos de enlace:</p>
+
+            <ul>
+                <li>Internos: los enlaces internos articulan una página web y guían al usuario en su navegación. Esta estructura interna puede tener diversas formas, desde una lineal, por ejemplo, en la cual el usuario puede ir de una subpágina a otra de la web en un determinado orden, a una de tipo arbóreo, en la que el usuario escoge a dónde ir desde la página principal. También es posible utilizar enlaces internos en una misma página, cuya función podría consistir en dirigir al usuario al principio del texto una vez ha llegado al final.</li>
+                <li>Externos: estos son los vínculos que envían al usuario a otra web y se usan para ofrecerle un valor añadido o recomendar una oferta diferente. En este caso, si se quiere evitar una valoración negativa en el buscador, conviene evitar un exceso de enlaces externos, así como también hay que controlar regularmente la calidad del contenido que se enlaza y el propio funcionamiento del enlace.</li>
+                <li>Otros enlaces: no todos los vínculos enlazan a documentos HTML. Algunos también refieren a la descarga de un documento, abren el cliente de correo electrónico o activan el visor de PDF.</li>
+            </ul>
+
+            <p>Para generar un vínculo se utiliza la etiqueta de HTML &ltal&gt, que deriva de "anchor", ancla en castellano, y cuya función es simplemente indicar que la información enmarcada es un enlace. Esto hace que siempre necesite un atributo, href (hiperreferencia), que señale a dónde dirige en enlace. El texto del enlace que el navegador muestra por defecto en azul y subrayado se escribe enmarcado en la etiqueta &ltal&gt.</p>
+
+            <p>Incluyendo la siguiente línea de código en la página de prueba la enlazamos a la segunda página (target page):</p>
+
+            <div class="codigo"><code>
+                &lta href="targetpage.html"&gtJump to target page&lt/a&gt
+            </code></div>
+
+            <p>Si el hipervínculo funciona correctamente debería abrirse una página vacía, ya que aún no se ha realizado ninguna acción en esta segunda página. En el siguiente paso incluimos en esta nueva página otro enlace interno que redirija a la original (previous page):</p>
+
+            <div class="codigo"><code>
+                &lta href="test.html"&gtBack to previous page&lt/a&gt
+            </code></div>
+        </section>
+    </main>
+    <footer>
+        <p>Informacion obtenida en <a target="_blank" href="https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/aprende-html-tutorial-para-principiantes/">Digital Guide</a></p>
+    </footer>
+</body>
+</html>
